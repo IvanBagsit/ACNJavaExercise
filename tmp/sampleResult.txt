@@ -1,0 +1,18 @@
+Print by Name: 
+Mary
+Alina
+John
+Nicole
+Mike
+
+Print by Age: 
+Nicole
+Mike
+
+Print in csv format:
+"Name","Age"
+"Mary","21"
+"Alina","22"
+"John","23"
+"Nicole","24"
+"Mike","25"
