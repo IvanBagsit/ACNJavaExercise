@@ -1,0 +1,5 @@
+
+file:
+  name: "/persons.txt"
+  directory: "tmp"
+  age: 23
