@@ -1,5 +1,7 @@
-
 file:
   name: "/persons.txt"
-  directory: "tmp"
-  age: 23
+  csvName: "/personsCSV.csv"
+  directory: tmp
+  specificAge: 23
+  characterLength: 4
+  headers: Name, Age
