@@ -22,7 +22,7 @@ public class FileWriterController {
     private final FileWriterService fileWriterService;
 
     @PostMapping("/createFile")
-    public ResponseEntity<ArrayList<FileWriterService.Person>> createFileByName(@RequestBody ArrayList<FileWriterService.Person> personList) {
+    public ResponseEntity<ArrayList<FileWriterService.Person>> createFile(@RequestBody ArrayList<FileWriterService.Person> personList) {
         log.info("createTxtFile started. Received list: " + personList.toString());
         try {
             return ResponseEntity.ok(fileWriterService.createFile(personList));
