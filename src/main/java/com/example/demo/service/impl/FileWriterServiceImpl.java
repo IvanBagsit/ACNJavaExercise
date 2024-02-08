@@ -78,7 +78,8 @@ public class FileWriterServiceImpl implements FileWriterService {
     }
 
     private void printCSV(ArrayList<Person> persons) throws IOException {
-        try (CSVWriter csvWriter = new CSVWriter(new FileWriter(directory + csvName))) {
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter(directory + csvName));
             ArrayList<String[]> csvData = new ArrayList<>();
             csvData.add(headers);
 
@@ -86,6 +87,7 @@ public class FileWriterServiceImpl implements FileWriterService {
                 String[] personTemp = {person.firstName(), String.valueOf(person.age())};
                 csvData.add(personTemp);
             });
+
             csvWriter.writeAll(csvData);
         } catch (IOException e) {
             log.error("Error encountered during csv printing: " + e);
