@@ -89,6 +89,7 @@ public class FileWriterServiceImpl implements FileWriterService {
             });
 
             csvWriter.writeAll(csvData);
+            csvWriter.close();
         } catch (IOException e) {
             log.error("Error encountered during csv printing: " + e);
             throw new IOException(e);
